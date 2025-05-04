@@ -167,7 +167,7 @@ Postup návrhu:
     - Separátní instrukční a datovou paměť máme, aby šly paměťové instrukce načíst a provést v jediném cyklu. V případě sjednocené paměti bychom museli v jednom cyklu načíst instrukci, a pak až v dalším cyklu provést paměťovou operaci
 - Na každém vstupu každého modulu budeme možná potřebovat pro různé instrukce přivést jedny z více různých dat (z různých míst v procesoru)
   - Tento problém výběru N z 1 můžeme vyřešit přidáním kontrolního signálů, který řídí, která z hodnot se vybere, a komponenty, která podle tohoto signálu umí výběr provést
-  - Není problém tohle udělat pro každý ze vstupů, i pokud nakonec zjistíme, že tam byla potřeba pouze jední hodnota, a výběr tedy nebylo potřeba řešit - stačí výběrový řídící signál zafixovat na konstantní hodnotu (všechny syntézní nástroje toto vyoptimalizují na přímé spojení drátů).
+  - Není problém tohle udělat pro každý ze vstupů, i pokud nakonec zjistíme, že tam byla potřeba pouze jediná hodnota, a výběr tedy nebylo potřeba řešit - stačí výběrový řídící signál zafixovat na konstantní hodnotu (všechny syntézní nástroje toto vyoptimalizují na přímé spojení drátů).
 - Pro každou instrukci projdeme tok dat, který zkrz CPU vyžaduje, a přidáme do možného výběru daných vstupů dráty s daty, které tam instrukce potřebuje.
   - ie. chceme-li kopírovat z libovolného registru do libovolného registru - musí jít přivést čtecí výstup z GPR do zapisovacího vstupu GPR
 - Je výhodné při kreslení diagramu používat "tunely" / "labely drátů" - pokud dva dráty na různých místech stejně pojmenujete, chápou se jako spojené.
